@@ -1,2 +1,2 @@
 # Wyatt
-New personal website
+https://wyattstanley.github.io/Wyatt/home.html
