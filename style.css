@@ -25,6 +25,13 @@ body {
 
 }
 
+@media (max-width: 768px) {
+    .img-responsive {
+        width: 80%;  /* Makes images larger for smaller screens */
+        max-width: 250px;
+    }
+}
+
 .about{
 	font-size:20px;
 	color:black;
@@ -92,17 +99,16 @@ h4{
 .portfolio-item {
 	padding: 0;
 }
-.img-responsive {
-    width: 20%;  /* Adjust percentage as needed */
-    max-width: 100px; /* Ensures the image doesn't grow too large */
-    display: block;
-    margin: 0 auto; /* Centers the image */
-    border-radius: 15px;
 
-	/* max-width: 10%;
-    max-height: 10%;
-	opacity:1; */
+.img-responsive {
+    width: 20%;  /* Adjust for better scaling */
+    max-width: 100px; /* Ensures images aren't too small */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 15px;
 }
+
 
 .img-responsive:hover {
 	opacity:0.4;
@@ -154,60 +160,87 @@ ul {
 
 
 
-
-
-.custom-btn {
-    background-color: #d1cfcf;;  /* Dark gray */
-    color: rgb(42, 41, 41);
+/* Shared Button Styles */
+.custom-btn, .custom-btn2, .custom-btn3 {
+    display: block;
+    width: auto;
+    min-width: 200px; /* Ensures a minimum size */
+    max-width: 250px; /* Prevents excessive width */
+    text-align: center;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
-    padding: 5px 160px;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin: 10px auto; /* Centers the button */
+}
+
+/* Individual Button Colors */
+.custom-btn {
+    background-color: #d1cfcf;
+    color: rgb(42, 41, 41);
 }
 
 .custom-btn:hover {
     background-color: #eee9e9;
-}
-
-.custom-btn:focus, .custom-btn:active {
-    outline: none !important;
-    box-shadow: none !important;
+    transform: scale(1.05); /* Slight scale-up effect */
 }
 
 .custom-btn2 {
-    background-color: #8765C0;  /* Dark gray */
+    background-color: #8765C0;
     color: #ffffff;
-    border: none;
-    padding: 5px 160px;
-    border-radius: 5px;
-    cursor: pointer;
-
 }
 
 .custom-btn2:hover {
     background-color: #d7c8f1;
-}
-
-.custom-btn2:focus, .custom-btn2:active {
-    outline: none !important;
-    box-shadow: none !important;
+    transform: scale(1.05);
 }
 
 .custom-btn3 {
-    background-color: #7EB9E5;  /* Dark gray */
+    background-color: #7EB9E5;
     color: rgb(17, 55, 133);
-    border: none;
-    padding: 5px 160px;
-    border-radius: 5px;
-    cursor: pointer;
-
 }
 
 .custom-btn3:hover {
     background-color: #b3d3e9;
+    transform: scale(1.05);
 }
 
-.custom-btn3:focus, .custom-btn3:active {
-    outline: none !important;
-    box-shadow: none !important;
+/* Accessibility and Focus */
+.custom-btn:focus, .custom-btn2:focus, .custom-btn3:focus,
+.custom-btn:active, .custom-btn2:active, .custom-btn3:active {
+    outline: 2px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .custom-btn, .custom-btn2, .custom-btn3 {
+        max-width: 80%; /* Adjusts button size for smaller screens */
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+.portfolio-wrapper {
+    max-width: 50%; /* Adjust as needed */
+    margin: 0 auto;
+    text-align: center;
+}
+
+.portfolio-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+}
+
+.portfolio-wrapper .custom-btn, 
+.portfolio-wrapper .custom-btn2, 
+.portfolio-wrapper .custom-btn3 {
+    width: 100%;
+    max-width: 100%;
+    display: block;
 }
