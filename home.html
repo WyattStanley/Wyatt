@@ -101,9 +101,11 @@
     <!-- Header -->
     <h1>WYATT STANLEY</h1>
 
-    <p>wyatt@thestanleyschool.com | (206) 604-2223 | 
-        <a href="https://www.linkedin.com/in/wyattstanley" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">LinkedIn</a>
-    </p>
+        <div class="row">
+            <center>
+            <div>
+                <p>wyatt@thestanleyschool.com | (206) 604-2223 | <a href="www.linkedin.com/in/wyattstanley" style="color: black; text-decoration: none;">linkedin</a>
+                </p>
 
     <br><br>
 
@@ -121,9 +123,25 @@
                 website design and development, data collection, and research.<br>
                 Identified over 173,000 square miles of at risk land.
         </div>
-    </div>
 
-    <br>
+        <script>
+            function toggleAbout(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        </script>
+        
+        <div>
+            
+            <div class="col-xs-12 portfolio-item">
+                <a href="https://hgis.uw.edu/shiftingqueerspace/" target="_blank" rel="noopener noreferrer">
+                    <img class="img-responsive" src="images/hgis.png" alt="" style="max-width: 50%; margin: 0 auto;">
+                </a>
+                <br>
 
     <!-- Project 2 -->
     <div class="portfolio-wrapper">
@@ -136,19 +154,43 @@
                 Responsible for Portland, ME data collection and upload.<br>
                 Collected and input over 1,300 rows of spatial data spanning over 50 years.
         </div>
-    </div>
 
-    <br>
+        <script>
+            function toggleAbout(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        </script>
+        
 
-    <!-- Project 3 -->
-    <div class="portfolio-wrapper">
-        <a href="https://wyattstanley.github.io/index.html" target="_blank" rel="noopener noreferrer">
-            <img src="images/projects.png" alt="GIS Projects">
-        </a>
-        <button class="custom-btn3" onclick="toggleAbout('projects')">about</button>
-        <div id="projects" class="about-text">
-            <p><b>Other GIS Projects:</b><br>
-                Project deliverables from the University of Washington.</p>
+        <div>
+            
+            <div class="col-xs-12 portfolio-item">
+                <a href="water.html">
+                    <img class="img-responsive" src="images/projects.png" alt="" style="max-width: 50%; margin: 0 auto;">
+                </a>
+                <br>
+   
+            <!-- About Button -->
+            <div style="text-align: center;">
+                <button class="custom-btn3" onclick="toggleAbout('projects')">about</button>
+            </div>
+
+            <!-- Hidden About Text -->
+            <div id="projects" style="display: none; text-align: center;">
+                <br>
+                <b>Other GIS Projects:</b>
+                <br>
+                Project deliverables from the Univeristy of Washington.<br>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
         </div>
     </div>
 
@@ -163,17 +205,44 @@
         </p>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        function toggleAbout(id) {
-            var element = document.getElementById(id);
-            element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
-        }
-    </script>
+        <script>
+            function toggleAbout(id) {
+                var element = document.getElementById(id);
+                if (element.style.display === "none") {
+                    element.style.display = "block";
+                } else {
+                    element.style.display = "none";
+                }
+            }
+        </script>
+        
+        <!-- /.row -->
 
-    <!-- jQuery & Bootstrap JS -->
+        <hr>
+
+        <!-- Pagination -->
+        <!-- /.row -->
+
+        <!-- Footer -->
+        <br>
+        <br>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                	<p>wyatt@thestanleyschool.com | (206) 604-2223 | <a href="www.linkedin.com/in/wyattstanley" style="color: black; text-decoration: none;">linkedin</a>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    
+    <!-- /.container -->
+
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>
+
+</body></html>
