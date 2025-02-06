@@ -1,2 +1,2 @@
 # Wyatt
-https://wyattstanley.github.io/Wyatt/home.html
+https://wyattstanley.github.io/Wyatt/home2.html
