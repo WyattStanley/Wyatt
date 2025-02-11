@@ -51,8 +51,6 @@
         }
 
         .custom-btn {
-            background-color: #d1cfcf;
-            color: #2A2929;
             width: 100%;
             display: block;
             margin-top: 10px;
@@ -65,21 +63,64 @@
             transition: all 0.3s ease-in-out;
         }
 
-        .custom-btn:hover {
-            background-color: #eee9e9;
+        .btn-green { background-color: #0B8753; color: #ECE0FF; }
+        .btn-green:hover { background-color: #0B8753; transform: scale(1.05); }
+
+        .btn-red { background-color: #E58D7E; color: #103F61; }
+        .btn-red:hover { background-color: #E58D7E; transform: scale(1.05); }
+
+        .btn-blue { background-color: #59A0D3; color: #08314E; }
+        .btn-blue:hover { background-color: #59A0D3; transform: scale(1.05); }
+
+        .about-text {
+            display: none;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #000;
+            opacity: 0.7;
+            color: white;
+            padding: 10px 15px;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: #000;
+            opacity: 0.3;
             transform: scale(1.05);
         }
     </style>
 </head>
 
 <body>
+    <button class="back-btn" onclick="window.location.href='index.html'">&larr; Back to Main Page</button>
     <h1>Other Projects</h1>
+    <br>
+    <br>
 
     <div class="portfolio-wrapper">
         <a href="https://storymaps.arcgis.com/stories/a3286286b63d48e590ddd3fb748c64aa" target="_blank" rel="noopener noreferrer">
             <img src="images/Eagle.png" alt="Project 1">
         </a>
-        <p>Project 1 Description</p>
+        <button class="custom-btn btn-green" onclick="toggleAbout('aboutProject1')">about</button>
+        <div id="aboutProject1" class="about-text">
+            <center>
+                <p><b>ArcGIS Story Map + ArcGIS Pro</b> <br>
+                Seattle Urban Wildlife story map displaying the growth of <br>
+                urban build enviroments and its impact on Wildlife in Seattle, WA.
+                </p>
+            </center>
+        </div>
     </div>
 
     <br>
@@ -88,7 +129,15 @@
         <a href="https://wyattstanley.github.io/CovidRatesCountsMap/map1.html" target="_blank" rel="noopener noreferrer">
             <img src="images/covid.png" alt="Project 2">
         </a>
-        <p>Project 2 Description</p>
+        <button class="custom-btn btn-red" onclick="toggleAbout('aboutProject2')">about</button>
+        <div id="aboutProject2" class="about-text">
+            <center>
+                <p><b>Virtual Studio Code + Mapbox:</b> <br>
+                An interactive display of covid rates by county in the United States. <br>
+                The data used is from the New York Times. The choropleth map displays Covid cases by 1 thousand residents. 
+                </p>
+            </center>
+        </div>
     </div>
 
     <br>
@@ -97,19 +146,31 @@
         <a href="https://example.com/project3" target="_blank" rel="noopener noreferrer">
             <img src="images/Gallery.png" alt="Project 3">
         </a>
-        <p>Project 3 Description</p>
+        <button class="custom-btn btn-blue" onclick="toggleAbout('aboutProject3')">about</button>
+        <div id="aboutProject3" class="about-text">
+            <center>
+                <p><b>Static Map Gallary</b> <br>
+                ArcGIS Pro, QGIS, Mapbox</p>
+            </center>
+        </div>
     </div>
 
     <br><br>
-
     <button class="custom-btn" onclick="window.location.href='index.html'">Back to Main Page</button>
-
     <br><br>
     <hr>
+
     <footer>
         <p>wyatt@thestanleyschool.com | (206) 604-2223 | 
             <a href="https://www.linkedin.com/in/wyattstanley" target="_blank" rel="noopener noreferrer" style="color: black; text-decoration: none;">LinkedIn</a>
         </p>
     </footer>
+
+    <script>
+        function toggleAbout(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === "none" || element.style.display === "") ? "block" : "none";
+        }
+    </script>
 </body>
 </html>
