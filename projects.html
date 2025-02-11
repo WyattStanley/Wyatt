@@ -99,6 +99,17 @@
             opacity: 0.3;
             transform: scale(1.05);
         }
+
+        @media (max-width: 768px) {
+            .portfolio-wrapper {
+                max-width: 80%;
+            }
+
+            .custom-btn {
+                font-size: 12px;
+                padding: 6px;
+            }
+        }
     </style>
 </head>
 
@@ -114,12 +125,9 @@
         </a>
         <button class="custom-btn btn-green" onclick="toggleAbout('aboutProject1')">about</button>
         <div id="aboutProject1" class="about-text">
-            <center>
-                <p><b>ArcGIS Story Map + ArcGIS Pro</b> <br>
-                Seattle Urban Wildlife story map displaying the growth of <br>
-                urban build enviroments and its impact on Wildlife in Seattle, WA.
-                </p>
-            </center>
+            <p><b>ArcGIS Story Map + ArcGIS Pro</b><br>
+                Seattle Urban Wildlife story map displaying the growth of urban build environments and its impact on Wildlife in Seattle, WA.
+            </p>
         </div>
     </div>
 
@@ -131,12 +139,9 @@
         </a>
         <button class="custom-btn btn-red" onclick="toggleAbout('aboutProject2')">about</button>
         <div id="aboutProject2" class="about-text">
-            <center>
-                <p><b>Virtual Studio Code + Mapbox:</b> <br>
-                An interactive display of covid rates by county in the United States. <br>
-                The data used is from the New York Times. The choropleth map displays Covid cases by 1 thousand residents. 
-                </p>
-            </center>
+            <p><b>Virtual Studio Code + Mapbox:</b><br>
+                An interactive display of COVID rates by county in the United States. The data used is from the New York Times. The choropleth map displays COVID cases by 1 thousand residents.
+            </p>
         </div>
     </div>
 
@@ -148,15 +153,12 @@
         </a>
         <button class="custom-btn btn-blue" onclick="toggleAbout('aboutProject3')">about</button>
         <div id="aboutProject3" class="about-text">
-            <center>
-                <p><b>Static Map Gallary</b> <br>
-                ArcGIS Pro, QGIS, Mapbox</p>
-            </center>
+            <p><b>Static Map Gallery</b><br>
+                ArcGIS Pro, QGIS, Mapbox
+            </p>
         </div>
     </div>
 
-    <br><br>
-    <button class="custom-btn" onclick="window.location.href='index.html'">Back to Main Page</button>
     <br><br>
     <hr>
 
